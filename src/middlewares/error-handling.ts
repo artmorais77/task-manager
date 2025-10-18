@@ -13,7 +13,7 @@ function errorHandling(
   }
   if (error instanceof ZodError) {
     res.status(400).json({
-      message: error.message,
+      message: "validation error",
       issues: error.format(),
     });
   }
